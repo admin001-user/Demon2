@@ -8,6 +8,7 @@
 - 输入校验：
   - 邮箱格式校验（必须符合 `name@domain` 格式）。
   - 密码长度校验（默认不少于 6 位）。
+  - 测试时可以使用邮箱：test@example.com;密码：123456。
 - 账号校验通过后，使用 `SharedPreferences` 持久化登录状态 `logged_in=true`，并保存基础用户信息（如 `username`）。
 - 行为：
   - 未登录时，点击进入 `MainActivity`。
