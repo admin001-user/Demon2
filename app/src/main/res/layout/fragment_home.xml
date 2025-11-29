@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页布局：标题、推荐卡片与四宫格入口按钮 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bfbfbf"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="信息App"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="发现精彩内容"/>
+        </LinearLayout>
+
+        <!-- 推荐卡片区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_container">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日推荐"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="探索最新的信息资讯，获取有价值的知识内容，让生活更加充实精彩。"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnRecommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即查看"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#1E88E5"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- 第一行入口（资讯/知识） -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <!-- 资讯入口卡片 -->
+            <LinearLayout
+                android:id="@+id/tileNews"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_container"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/consult"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="资讯" />
+            </LinearLayout>
+
+            <!-- 知识入口卡片 -->
+            <LinearLayout
+                android:id="@+id/tileKnowledge"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_container"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/kownlegde" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="知识" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 第二行入口（趋势/社区） -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <!-- 趋势入口卡片 -->
+            <LinearLayout
+                android:id="@+id/tileTrend"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_container"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/trend" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="趋势" />
+            </LinearLayout>
+
+            <!-- 社区入口卡片 -->
+            <LinearLayout
+                android:id="@+id/tileCommunity"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_container"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/community" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="社区" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

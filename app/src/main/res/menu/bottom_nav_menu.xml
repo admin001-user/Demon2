@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部导航菜单项：首页/信息/我的 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:iconTint="#00dcff"
+        android:title="首页"
+        android:icon="@drawable/home" />
+    <item
+        android:id="@+id/nav_info"
+        android:title="信息"
+        android:icon="@drawable/information" />
+    <item
+        android:id="@+id/nav_mine"
+        android:title="我的"
+        android:icon="@drawable/mine" />
+</menu>
