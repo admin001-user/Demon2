@@ -38,11 +38,13 @@
 
 ## 截图
 
-![登录界面](./images/login_screen.jpg)
+![登录界面](./images/login.png)
 
-![替换头像前](./images/before.jpg)
+![首页](./images/home.png)
 
-![替换头像后](./images/after.jpg)
+![信息页](./images/information.png)
+
+![个人中心](./images/Mine.jpeg)
 
 ## 验证步骤
 

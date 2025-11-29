@@ -4,6 +4,7 @@
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:overScrollMode="ifContentScrolls"> <!-- 优化滚动边缘反馈 -->
 
     <LinearLayout
@@ -38,12 +39,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入邮箱"
+                app:startIconDrawable="@drawable/email"
                 android:layout_marginBottom="16dp"> <!-- 输入框之间增加间距 -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="50dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -51,11 +54,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入密码"
+                app:startIconDrawable="@drawable/password"
                 app:endIconMode="password_toggle">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingStart="50dp"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -72,18 +77,46 @@
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="55dp"
             android:text="登录"
+            app:cornerRadius="10dp"
             android:backgroundTint="#1E88E5"
             android:textColor="@android:color/white"
             android:layout_marginTop="16dp" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp">
+
+        <!-- 左横线 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#888888" /> <!-- 横线颜色（浅灰色，和文字协调） -->
+
+        <!-- 中间文字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="或者"
-            android:gravity="center"
-            android:layout_marginTop="24dp" />
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" /> <!-- 文字与右横线的间距 -->
+
+        <!-- 右横线 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#888888" /> <!-- 和左横线同色 -->
+
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,8 +128,13 @@
             <Button
                 android:id="@+id/btnWeChat"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
+                android:backgroundTint="#EEEEEE"
+                app:cornerRadius="10dp"
+                android:drawableLeft="@drawable/weixin"
+                android:textColor="@color/black"
+                android:drawablePadding="1dp"
                 android:text="微信登录" />
 
             <View
@@ -106,20 +144,40 @@
             <Button
                 android:id="@+id/btnApple"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/app"
+                android:textColor="@color/black"
+                android:backgroundTint="#EEEEEE"
                 android:layout_weight="1"
+                app:cornerRadius="10dp"
                 android:text="Apple登录" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
         <!-- 增加顶部间距，确保内容总高度足够 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="还没有账户? 立即注册"
+            android:text="还没有账户?"
             android:layout_gravity="center"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="32dp" /> <!-- 底部增加间距，避免键盘遮挡时贴边 -->
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即注册"
+                android:layout_marginLeft="5dp"
+                android:textColor="#1E88E5"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="32dp" />
+    </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

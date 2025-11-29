@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 个人中心布局：顶部信息区 + 功能项列表 + 退出登录按钮 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- 顶部信息区：头像+昵称+签名 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:background="#2196F3"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
 
         <ImageView
             android:id="@+id/ivAvatar"
@@ -47,14 +50,21 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!-- 功能项：个人信息 -->
     <LinearLayout
         android:id="@+id/rowProfile"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:background="#F5F7FA"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/person_information"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -63,19 +73,26 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_next" />
+            android:src="@drawable/next" />
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" />
 
+    <!-- 功能项：我的收藏 -->
     <LinearLayout
         android:id="@+id/rowFavorites"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:background="#F5F7FA"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/my_save"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -84,19 +101,26 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_next" />
+            android:src="@drawable/next" />
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" />
 
+    <!-- 功能项：浏览历史 -->
     <LinearLayout
         android:id="@+id/rowHistory"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:background="#F5F7FA"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/history"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -105,19 +129,26 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_next" />
+            android:src="@drawable/next" />
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" />
 
+    <!-- 功能项：设置 -->
     <LinearLayout
         android:id="@+id/rowSettings"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal"
+        android:background="#F5F7FA"
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/setting"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -126,19 +157,26 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_next" />
+            android:src="@drawable/next" />
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" />
 
+    <!-- 功能项：关于我们 -->
     <LinearLayout
         android:id="@+id/rowAbout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal"
+        android:background="#F5F7FA"
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/about_us"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -147,19 +185,26 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_next" />
+            android:src="@drawable/next" />
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" />
 
+    <!-- 功能项：意见反馈 -->
     <LinearLayout
         android:id="@+id/rowFeedback"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:background="#F5F7FA"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/suggest"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -168,11 +213,12 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@android:drawable/ic_media_next" />
+            android:src="@drawable/next" />
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" />
 
+    <!-- 退出登录按钮 -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
